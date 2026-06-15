@@ -12,7 +12,14 @@
  * sumDouble(5, 5); // 20
  */
 export function sumDouble(num1, num2) {
-  /* TODO */
+  let sum;
+  if (num1 == num2) {
+    sum = (num1 + num2) * 2;
+    return sum;
+  } else {
+    sum = num1 + num2;
+    return sum;
+  }
 }
 
 /**
@@ -28,7 +35,14 @@ export function sumDouble(num1, num2) {
  * makes10(4, 4); // false
  */
 export function makes10(num1, num2) {
-  /* TODO */
+  let sum = num1 + num2;
+  if ((num1 || num2) == 10) {
+    return true;
+  } else if (sum == 10) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -46,7 +60,17 @@ export function makes10(num1, num2) {
  * near100(105, 10); // true
  */
 export function near100(n, distance) {
-  /* TODO */
+  let diff = Math.abs(n - distance);
+  console.log(diff);
+  let sum = Math.abs(n + distance);
+  console.log(sum);
+  if (sum == 100 || diff == 100) {
+    return true;
+  } else if ((n > 100 && 100 > diff) || (n < 100 && 100 < sum)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -63,7 +87,11 @@ export function near100(n, distance) {
  * isMultiple35(7); // false
  */
 export function isMultiple35(n) {
-  /* TODO */
+  if (n % 5 === 0 || n % 3 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -81,7 +109,13 @@ export function isMultiple35(n) {
  * shareLastDigit(10, 21); // false
  */
 export function shareLastDigit(num1, num2) {
-  /* TODO */
+  x = num1 % 10;
+  y = num2 % 10;
+  if (x == y) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -98,7 +132,11 @@ export function shareLastDigit(num1, num2) {
  * isColdAndHot(10, 50); // false
  */
 export function isColdAndHot(temp1, temp2) {
-  /* TODO */
+  if ((temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -114,7 +152,8 @@ export function isColdAndHot(temp1, temp2) {
  * makeABBA("a", "b"); // "abba"
  */
 export function makeABBA(A, B) {
-  /* TODO */
+  myString = A + B + B + A;
+  return myString;
 }
 
 /**
@@ -135,7 +174,15 @@ export function makeABBA(A, B) {
  * makeSLS("a", "abc"); // "aabca"
  */
 export function makeSLS(str1, str2) {
-  /* TODO */
+  len1 = str1.length;
+  len2 = str2.length;
+  if (len1 < len2) {
+    return str1 + str2 + str1;
+  } else if (len2 < len1) {
+    return str2 + str1 + str2;
+  } else {
+    return "Same length";
+  }
 }
 
 /**
@@ -156,7 +203,15 @@ export function makeSLS(str1, str2) {
  * canEnterClub(5, 5); // 1
  */
 export function canEnterClub(you, date) {
-  /* TODO */
+  if (you <= 2 || date <= 2) {
+    return 0;
+  } else if (you < 8 && date < 8) {
+    return 1;
+  } else if (you > 10 || date > 10) {
+    return "error";
+  } else if (you >= 8 || date >= 8) {
+    return 2;
+  }
 }
 
 /**
@@ -177,5 +232,11 @@ export function canEnterClub(you, date) {
  * shouldAnswerPhone(true, true, false); // true
  */
 export function shouldAnswerPhone(isMorning, isBoss, isAsleep) {
-  /* TODO */
+  if (isMorning && isBoss && !isAsleep) {
+    return true;
+  } else if (!isMorning && !isBoss && !isAsleep) {
+    return true;
+  } else {
+    return false;
+  }
 }

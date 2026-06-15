@@ -4,7 +4,21 @@
   "scripts": {
     "test": "vitest"
   },
-  "dependencies": {
-    "vitest": "^4.0.15"
+  "version": "1.0.0",
+  "description": "This is the first of many TDD activities! This style of problem set will help you prepare for technical interviews.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrdtnyc/tdd-intro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jrdtnyc/tdd-intro/issues"
+  },
+  "homepage": "https://github.com/jrdtnyc/tdd-intro#readme",
+  "devDependencies": {
+    "vitest": "^4.1.8"
   }
 }
